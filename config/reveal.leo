@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -13,28 +10,37 @@
 <v t="leo.20180902120538.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20180902120538.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20180902120523.1" a="E"><vh>編輯 reveal</vh>
-<v t="leo.20180902120523.2" a="E"><vh>@path ./../reveal</vh>
-<v t="leo.20180902120523.3" a="E"><vh>@clean index.html</vh>
-<v t="leo.20180902120523.4" a="E"><vh>html</vh>
+<v t="leo.20180902120523.1"><vh>編輯 reveal</vh>
+<v t="leo.20180902120523.2"><vh>@path ./../reveal</vh>
+<v t="leo.20180902120523.3"><vh>@clean index.html</vh>
+<v t="leo.20180902120523.4"><vh>html</vh>
 <v t="leo.20180902120523.5"><vh>head</vh></v>
-<v t="leo.20180902120523.6" a="E"><vh>body</vh>
-<v t="leo.20180902120523.7" a="E"><vh>reveal div</vh>
-<v t="leo.20180902120523.8" a="E"><vh>slides div</vh>
-<v t="leo.20180902120523.9" a="E"><vh>封面投影片</vh>
+<v t="leo.20180902120523.6"><vh>body</vh>
+<v t="leo.20180902120523.7"><vh>reveal div</vh>
+<v t="leo.20180902120523.8"><vh>slides div</vh>
+<v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20180902120523.11" a="E"><vh>快捷鍵</vh>
+<v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
+<v t="leo.20200324220038.1"><vh>Assignment 1.</vh>
+<v t="leo.20200324220038.2"><vh>content</vh></v>
+</v>
+<v t="leo.20200324221803.1"><vh>Python3.8.2</vh>
+<v t="leo.20200324221803.2"><vh>portable programming</vh></v>
+</v>
+<v t="leo.20200324230537.1"><vh>RandomGrouping</vh>
+<v t="leo.20200324230537.2"><vh>RandomGrouping</vh></v>
+</v>
 <v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180902120523.14" a="E"><vh>導入數學符號與方程式</vh>
+<v t="leo.20180902120523.14"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180902120523.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20180902120523.16" a="E"><vh>導入縮排程式碼</vh>
+<v t="leo.20180902120523.16"><vh>導入縮排程式碼</vh>
 <v t="leo.20180902120523.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20180902120523.18" a="E"><vh>導入影片</vh>
+<v t="leo.20180902120523.18"><vh>導入影片</vh>
 <v t="leo.20180902120523.19"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
@@ -48,15 +54,13 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
-
-### KMOLab
+<t tx="leo.20180902120523.10"># [CD2020ag3](https://github.com/s40723110/cd2020ag3)
 
 &lt;small&gt;
 Created by [KMOLab](http://lab.kmol.info/)
-&lt;/small&gt;
 
-[CMSimfly 網誌](./../blog/index.html)
+&lt;/small&gt;
+[CD2020ag3 網誌😍](./../blog/index.html)
 
 
 </t>
@@ -326,5 +330,92 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
+<t tx="leo.20200324220038.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200324220038.2"># Assignment 1
+* Describe how to do an efficient random grouping for this course or do the roll calling randomly?
+* Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain CMSiMDE website, Pelican blog and Reveal.js presentation on Github?
+* What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?
+
+</t>
+<t tx="leo.20200324221803.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200324221803.2"># Portable programming
+
+[portable programming](https://s40723110.github.io/cd2020ag3/content/Python3.8.2.html)
+
+</t>
+<t tx="leo.20200324230537.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200324230537.2"># RandomGrouping
+
+```
+@language python
+import requests
+import random
+url = "https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt"
+Msource = requests.get(url)
+#print(Msource.text)
+member = Msource.text
+mlist = member.split("\n")
+mlist.pop()
+#print(member)
+mlen = len(mlist)
+#print(mlist[0:13])
+random.shuffle(mlist)
+ 
+g1 = 13
+g2 = 2*g1
+g3 = 3*g1
+g4 = int(mlen)
+ 
+print("全班共",mlen,"人")
+for i in range(1,5):
+    print("Group",i,":")
+    if (i == 1):
+        for j in range(0,g1):
+            print(mlist[j])
+            j += 1
+        print("-"*20)
+    elif (i == 2):
+        for m in range(g1,g2):
+            print(mlist[g1])
+            g1 += 1
+        print("-"*20)
+    elif (i == 3):
+        for k in range(g2,g3):
+            print(mlist[g2])
+            g2 += 1
+        print("-"*20)
+    elif (i == 4):
+        for l in range(g3,g4):
+            print(mlist[g3])
+            g3 += 1
+        print("-"*20)
+print(mlist)
+```
+
+</t>
 </tnodes>
 </leo_file>
