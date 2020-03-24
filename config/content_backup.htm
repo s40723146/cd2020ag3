@@ -25,22 +25,62 @@
 <p></p>
 <p></p>
 <p><span style="color: #ffff99; background-color: #333333;"></span></p>
-<h5></h5><h1>Assignment 1</h1>
+<h5></h5>
+<h1>Assignment 1</h1>
 <h4 style="text-align: left;"><strong>Assignment 1-3分工</strong></h4>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
 <p><strong><img alt="" height="359" src="/images/分工01.png" width="319"/></strong></p>
-
+<p><br/><a href="https://www.coppeliarobotics.com/helpFiles/index.html"></a>Assignment</p>
 <h2>assignment 1</h2>
 <p>1.</p>
 <p></p>
 <p>2.</p>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<p></p>
-<p>3.</p>
-=======
 <p>3.<strong></strong></p>
 <p><a href="http://coppeliarobotics.com/">CoppeliaSim</a>高度可定制的模擬器，可以自定義模擬的每個方面。此外模擬器本身可以進行定制，以使性能完全符合要求。</p>
 <p>這可以通過精心設計的應用程序編程接口（API）來實現。</p>
 <p>支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點（顯然還有缺點），但所有六種方法都是相互兼容的（即可以同時使用，甚至可以協同使用）。</p>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 1ac9cc6465c11da7e49140fadb041facdb69807d
-<h4></h4>
+<h2>Random grouping</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
+import random
+url = "https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt"
+Msource = requests.get(url)
+#print(Msource.text)
+member = Msource.text
+mlist = member.split("\n")
+mlist.pop()
+#print(member)
+mlen = len(mlist)
+#print(mlist[0:13])
+random.shuffle(mlist)
+
+g1 = 13
+g2 = 2*g1
+g3 = 3*g1
+g4 = int(mlen)
+
+print("全班共",mlen,"人")
+for i in range(1,5):
+    print("Group",i,":")
+    if (i == 1):
+        for j in range(0,g1):
+            print(mlist[j])
+            j += 1
+        print("-"*20)
+    elif (i == 2):
+        for m in range(g1,g2):
+            print(mlist[g1])
+            g1 += 1
+        print("-"*20)
+    elif (i==3):
+        for k in range(g2,g3):
+            print(mlist[g2])
+            g2 += 1
+        print("-"*20)
+    elif (i == 4):
+        for l in range(g3,g4):
+            print(mlist[g3])
+            g3 += 1
+        print("-"*20)
+print(mlist)
+</pre>
+<p></p>
