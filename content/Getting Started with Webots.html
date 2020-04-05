@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots User Guide-1.html'>Webots User Guide-1</a><ul class='dropdown'><li><a href='Getting Started with Webots-1.html'>Getting Started with Webots-1</a></li></ul><li class='has-children'><a href='Webots User Guide-2.html'>Webots User Guide-2</a><ul class='dropdown'><li><a href='Getting Started with Webots-2.html'>Getting Started with Webots-2</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,11 +154,31 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Assignment 2 << <a href='Assignment 2.html'>Previous</a> <a href='Getting Started with Webots-1.html'>Next</a> >> Getting Started with Webots-1<br /><h1>Webots User Guide-1</h1>
-<p>先安裝webot 可熙版本 <a href="https://drive.google.com/a/gm.nfu.edu.tw/uc?id=1MolDH7kKJt_IIBTrKalsMfNWMrqqTWdt&amp;export=download">載點位置</a></p>
+    <div id="tipue_search_content">Webots User Guide << <a href='Webots User Guide.html'>Previous</a> <br /><h1>Getting Started with Webots</h1>
 <p></p>
-<h4>簡單分工</h4>
-<p><img alt="" height="491" src="./../images/分工2.png" width="235"/></p><br />Assignment 2 << <a href='Assignment 2.html'>Previous</a> <a href='Getting Started with Webots-1.html'>Next</a> >> Getting Started with Webots-1</div>
+<p>在我負責之部分第一項目首先講解到如何開始使用Webots的畫面與視窗，雖然這整本電子書都是在解說Webots介面使用，但在實際使用方面卻有所差別，以下為首要大略提到的標題及小標題的重點與補充說明。</p>
+<p>章節一；開始操作Webots</p>
+<p>目錄:</p>
+<p><img alt="" height="540" src="./../images/chrome_2020-04-05_21-44-35.png" width="750"/><span style="background-color: #ffffff; color: #ff0000;">介紹Webots </span></p>
+<p><br/><span style="color: #333399;">原文重點:</span></p>
+<p><span style="color: #ff0000;">1</span>-It offers a rapid prototyping environment, that allows the user to create 3D virtual worlds with physics properties such as mass, joints, friction coefficients, etc.<br/> <span style="color: #ff0000;">2</span>-The user can add simple passive objects or active objects called mobile robots. These robots can have different locomotion schemes (wheeled robots, ，legged robots, or flying robots).<br/> <span style="color: #ff0000;">3</span>-Webots is well suited for research and educational projects related to mobile robotics. <br/> <span style="color: #ff0000;">4</span>-even if you don't know these languages, you can still program the e-puck and Hemisson robots using a simple graphical programming language called<br/> <span style="color: #ff0000;">5</span>-If you don't want to use existing robot models provided within Webots and would like to create your own robot models, or add special objects in the simulated environments, you will need a basic knowledge of 3D computer graphics and VRML97 description language. <br/> <span style="color: #ff0000;">6</span>- A world file doesn't contain the controller code of the robots; it only specifies the name of the controller that is required for each robot. <br/> <span style="color: #ff0000;">7</span>-it can execute operations that can normally only be carried out by a human operator and not by a real robot.</p>
+<p><span style="color: #333399;">中文概略解說:</span></p>
+<p>提供模擬環境，使用戶可創建物理特性(質量、摩擦係數等等)的3D虛擬世界，可添加各種不同輪型、飛行等機器人在景象中，且配備感測器、執行設備等(攝像機、馬達、接收器等)，也可對機器人做單獨編程。</p>
+<p>包含大量機械人模型與程式控制器範例包(可將程式轉移到e-puck，DARwIn-OP等真實機器人)，以幫助用戶熟Webots 。</p>
+<p>Webots在機器人技術上有一定程度的依靠，例如:移動機器人原型製作、多主體研究、教授機器人技術、機器人競賽等等涉略範圍。</p>
+<p>即使不知道python、c++、java等程式編碼的知識，依然可以使用BotStudio程式編碼器對機器人編輯。<br/>如果不喜歡模組中原有的機器人範例包，也可另外使用3D、VRML97描述語言的程式來創建模型並導入。<br/> <br/><span style="color: #ff0000;">Webots模擬組成條件:</span><br/> <span style="color: #ff6600;">1</span>-.wbt副檔名，定義多個既器人與環境，取決於外部(proto)，檔案儲存在每個Webots項目裡worlds子目錄中。<br/> <span style="color: #ff6600;">2</span>-在c++可進行修改可選之物理插件。<br/> <span style="color: #ff6600;">3</span>-機器人都由程式控制程序組成(python、c++、java)。<br/> <span style="color: #ff6600;">4</span>-對於環境中物件之方向、位置、形狀、顏色、亮度會仔細編輯。<br/> <span style="color: #ff6600;">5</span>-關節本身包含一個攝像頭，但World文件不包含機器人控制器代碼，只有指定每個機器人所需控制器名稱。</p>
+<p><br/>管理者可執行是因為操作者正在執行的關係，並不是由機器人執行操作，適合任何編碼語言，但與常規控制器來說管理者將有權使用特權操作(包含模擬控制)。</p>
+<p>開始Webots之操作<br/> <br/>使用者介面</p>
+<p>3D視窗</p>
+<p>情景樹</p>
+<p>優先選項</p>
+<p>Webots傳訊</p>
+<p>電腦設備</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><br />Webots User Guide << <a href='Webots User Guide.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
