@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a></li></ul><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='環境.html'>環境</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,7 +154,7 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">CoppeliaSim << <a href='CoppeliaSim.html'>Previous</a> <a href='Calculation modules.html'>Next</a> >> Calculation modules<br /><h1>環境</h1>
+    <div id="tipue_search_content">Environment << <a href='Environment.html'>Previous</a> <a href='Entities.html'>Next</a> >> Entities<br /><h1>環境</h1>
 <p>scenes</p>
 <p></p>
 <p>場景和模型是CoppeliaSim的主要模擬元素。 模型是場景的子元素，明確標記為模型。</p>
@@ -161,7 +168,8 @@ init_mathjax();
 <p><span>CoppeliaSim中的環境定義了屬於場景但不屬於場景對象的屬性和參數。 保存模型時不保存環境屬性和參數，而僅保存場景時不保存。</span></p>
 <p><span>entities</span></p>
 <p></p>
-<p><span>實體是指場景對像或集合的術語。 </span></p><br />CoppeliaSim << <a href='CoppeliaSim.html'>Previous</a> <a href='Calculation modules.html'>Next</a> >> Calculation modules</div>
+<p><span>實體是指場景對像或集合的術語。 </span></p>
+<br />Environment << <a href='Environment.html'>Previous</a> <a href='Entities.html'>Next</a> >> Entities</div>
         
     <!-- footer -->
       <div class="container">

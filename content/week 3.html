@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a></li></ul><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='環境.html'>環境</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,17 +154,14 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">WEEK << <a href='WEEK.html'>Previous</a> <a href='Assignment 1.html'>Next</a> >> Assignment 1<br /><h1>week 3</h1>
+    <div id="tipue_search_content">WEEK << <a href='WEEK.html'>Previous</a> <a href='week 4.html'>Next</a> >> week 4<br /><h1>week 3</h1>
 <p></p>
 <p>taskleader :40723145 40723126 40723146<br/>      1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
 <p><br/>taskleader :40723110 40723112 40723130<br/>      2. Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain CMSiMDE website, Pelican blog and Reveal.js presentation on Github?</p>
 <p><br/>taskleader :40723125 40723103 40723120 40723142<br/>       3. What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?</p>
-<p>w3開會紀錄<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/c06esX1zO90" width="560"></iframe></p>
-<p></p>
-<p></p>
-<p><span style="color: #ffff99; background-color: #333333;"></span></p>
-<h5></h5>
-<br />WEEK << <a href='WEEK.html'>Previous</a> <a href='Assignment 1.html'>Next</a> >> Assignment 1</div>
+<p>w3開會紀錄<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/c06esX1zO90" width="560"></iframe><br/><br/></p>
+<p>=================================================================</p>
+<br />WEEK << <a href='WEEK.html'>Previous</a> <a href='week 4.html'>Next</a> >> week 4</div>
         
     <!-- footer -->
       <div class="container">

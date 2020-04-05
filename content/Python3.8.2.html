@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a></li></ul><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='環境.html'>環境</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,7 +154,7 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">Assignment 1 << <a href='Assignment 1.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim<br /><h1>Python3.8.2</h1>
+    <div id="tipue_search_content">Assignment -1 report << <a href='Assignment -1 report.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim<br /><h1>Python3.8.2</h1>
 <h4>basic Win10 portable programming</h4>
 <p>在你的可攜下創建一個data子目錄  :  </p>
 <p></p>
@@ -156,21 +163,14 @@ init_mathjax();
 <p><span id="tagline">要用git指令要有portablegit 。data下子目錄存取為portablegit(需與啟動檔配合)。</span></p>
 <p><span></span>start.bat (參考) :</p>
 <p><img alt="" height="177" src="https://s40723110.github.io/cd2020/images/portablegit.png" width="600"/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p><span></span>=================================================================</p>
+<p></p>
 <p><a href="https://www.python.org/"><img alt="python™" class="python-logo" height="82" src="https://www.python.org/static/img/python-logo@2x.png" width="290"/></a></p>
 <p><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
 <p>選取需要的版本(EX : 3.8.2) </p>
 <p>點取執行檔<a href="https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe">Windows x86-64 executable installer</a></p>
 <p><span>data下子目錄</span>存取的名稱要跟執行檔相配合(EX : py38)</p>
 <p><img alt="" height="502" src="https://s40723110.github.io/cd2020/images/sitep382.png" width="600"/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
-<p><span></span></p>
+<p></p>
 <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tbody>
 <tr>
@@ -346,10 +346,7 @@ init_mathjax();
 <p><span><img alt="" height="205" src="https://s40723110.github.io/cd2020/images/%E6%9C%AA%E5%91%BD%E5%90%8D1.png" width="264"/></span></p>
 <p><span><img alt="" height="258" src="https://s40723110.github.io/cd2020/images/tcc.png" width="280"/></span></p>
 <p><span><a href="https://bellard.org/tcc/">https://bellard.org/tcc/</a></span></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>================================================================</p>
+<p></p>
 <h5>pip</h5>
 <p><a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>頁面存取成data下的get-pip.py</p>
 <p>再繼續用 :</p>
@@ -372,8 +369,6 @@ init_mathjax();
 </div>
 </div>
 <p>下載網際系統相關套件</p>
-<p></p>
-<p>==============================================================</p>
 <div class="maincontent">
 <h4>HxD - Freeware Hex Editor and Disk Editor</h4>
 <div><a href="https://mh-nexus.de/en/graphics/HxDShotLarge.png"><img alt="Mini screenshot of HxD hex editor and disk editor" src="https://mh-nexus.de/en/graphics/MiniShotHxD.png"/></a>
@@ -384,7 +379,7 @@ init_mathjax();
 <p>選取該version區目前適合的版本</p>
 <p><span>利用 HxD 修改 pip.exe 中python.exe 的所在位置(pip.exe是存取在p38的Scripts裡) , HxD 開啟之後搜尋c:\py38\python.exe , 然後將滑鼠停在 c 然後輸入y:\p37\python.exe, 以便讓可攜系統啟動後, 可以將指令搜尋路徑設到 y:\p38\Scripts , 這樣就可以直接以 </span><span>"pip install " 指令安裝套件.</span></p>
 <div>
-<div class="syntaxhighlighter html" id="highlighter_134610">
+<div class="syntaxhighlighter html">
 <table border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
@@ -399,14 +394,10 @@ init_mathjax();
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 <p></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>================================================================</p>
-<h4>MSYS2 installer</h4>
+</div>
+<div class="syntaxhighlighter html" id="highlighter_134610">MSYS2 installer</div>
+</div>
 <p>MSYS2 : <a href="https://www.msys2.org/">https://www.msys2.org/</a></p>
 <p><img alt="" height="157" src="https://s40723110.github.io/cd2020/images/MSYS2.png" width="600"/></p>
 <p>接著設定start.bat</p>
@@ -434,41 +425,25 @@ init_mathjax();
 </table>
 </div>
 </div>
-<p><br/><br/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
+<p></p>
 <h4>ShareX</h4>
 <p>ShareX : <a href="https://getsharex.com/">https://getsharex.com/</a></p>
 <p><img alt="" height="170" src="https://s40723110.github.io/cd2020/images/shareX.png" width="600"/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
+<p></p>
 <h4>Tmp (Y\tmp : git clone .....)</h4>
 <p><img alt="" height="172" src="https://s40723110.github.io/cd2020/images/tmp.png" width="600"/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
-<header class="site-header"><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"><img alt="Flutter logo" caption="false" height="117" src="https://raw.githubusercontent.com/flutter/website/master/src/_assets/image/flutter-lockup.png" width="400"/></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"><a href="https://github.com/flutter/flutter">https://github.com/flutter/flutter</a></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"><img caption="false" height="73" src="https://s40723110.github.io/cd2020/images/flutter.png" width="500"/></nav></header>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
+<p><img alt="Flutter logo" caption="false" height="117" src="https://raw.githubusercontent.com/flutter/website/master/src/_assets/image/flutter-lockup.png" width="400"/></p>
+<header class="site-header"><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"><a href="https://github.com/flutter/flutter">https://github.com/flutter/flutter</a></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"></nav><nav class="navbar navbar-expand-md justify-content-start justify-content-md-between"><img caption="false" height="73" src="https://s40723110.github.io/cd2020/images/flutter.png" width="500"/></nav></header>
+<p></p>
 <h4><img caption="false" height="80" src="https://www.fossil-scm.org/index.html/doc/trunk/www/fossil3.gif" width="80"/>Fossil</h4>
 <p></p>
 <p><a href="https://www.fossil-scm.org/index.html/doc/trunk/www/build.wiki">https://www.fossil-scm.org/index.html/doc/trunk/www/build.wiki</a></p>
 <p></p>
 <p><img alt="" height="91" src="https://s40723110.github.io/cd2020/images/fossil.png" width="600"/></p>
-<p>.</p>
-<p>..</p>
-<p>...</p>
-<p>=================================================================</p>
+<p></p>
 <p>putty <a href="https://github.com/s40723110/cd2020/raw/master/downloads/putty.zip">putty</a></p>
 <p><img alt="" height="332" src="https://s40723110.github.io/cd2020/images/putty.png" width="193"/></p>
-<br />Assignment 1 << <a href='Assignment 1.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim</div>
+<br />Assignment -1 report << <a href='Assignment -1 report.html'>Previous</a> <a href='CoppeliaSim.html'>Next</a> >> CoppeliaSim</div>
         
     <!-- footer -->
       <div class="container">
